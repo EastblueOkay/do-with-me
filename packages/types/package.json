@@ -1,0 +1,9 @@
+{
+  "name": "@follow-me/types",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Typescript types for @follow-me",
+  "types": "index.d.ts",
+  "author": "eastblue_lan@126.com",
+  "license": "ISC"
+}
