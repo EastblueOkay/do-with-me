@@ -1,0 +1,11 @@
+{
+  "name": "@follow-me/play",
+  "version": "0.0.0",
+  "description": "Let users know how to use your project",
+  "main": "/lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
