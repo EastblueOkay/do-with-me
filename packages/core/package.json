@@ -1,7 +1,7 @@
 {
-  "name": "@follow-me/react",
+  "name": "@follow-me/core",
   "version": "0.0.0",
-  "description": "React Components for reproducing operation steps",
+  "description": "Let users get started with your product",
   "main": "/lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
