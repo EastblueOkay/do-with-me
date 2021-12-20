@@ -4,8 +4,12 @@
   "description": "Guide users how to use your product",
   "main": "/lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "@follow-me/builder"
   },
   "author": "eastblue_lan@126.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@follow-me/builder": "0.0.0"
+  }
 }
