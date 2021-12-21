@@ -1,3 +1,5 @@
-import babel from './babel'
+import buildLib from './lib'
+import buildEs from './es'
 
-export default () => babel()
+buildLib()
+buildEs()
