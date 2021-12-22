@@ -1,5 +1,3 @@
-import buildLib from './lib'
-import buildEs from './es'
+import convert from './conver'
 
-buildLib()
-buildEs()
+convert()

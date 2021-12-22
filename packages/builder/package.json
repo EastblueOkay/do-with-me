@@ -5,8 +5,9 @@
   "description": "@follow-me packages builder",
   "main": "/lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "clean": "rimraf lib",
+    "copy-files": "copyfiles -a -u 1 src/**/*.swcrc lib/",
+    "build": "yarn clean && tsc && yarn copy-files"
   },
   "bin": {
     "builder": "./bin/builder.js"
@@ -14,13 +15,11 @@
   "author": "eastblue_lan@126.com",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "@babel/preset-react": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.5",
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.121",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4",
-    "webpack": "^5.65.0"
+    "typescript": "^4.5.4"
   }
 }
