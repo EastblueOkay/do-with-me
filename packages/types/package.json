@@ -5,5 +5,8 @@
   "description": "Typescript types for @follow-me",
   "types": "index.d.ts",
   "author": "eastblue_lan@126.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csstype": "^3.0.10"
+  }
 }
