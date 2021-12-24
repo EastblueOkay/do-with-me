@@ -15,7 +15,6 @@ export default class Core {
 
   public start() {
     if (!this.options.steps?.length) return
-    //#TODO: 等待页面路由加载完毕
     this.play(0)
   }
 
@@ -25,7 +24,8 @@ export default class Core {
       this.finish()
       return
     }
-    await stepDo(step)
+    await stepDo(step, index)
+    await this.play(index + 1)
   }
 
   public getCurrentIndex(): number {

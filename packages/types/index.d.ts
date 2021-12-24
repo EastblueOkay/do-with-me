@@ -4,8 +4,8 @@ import * as CSS from 'csstype'
  * 步骤
  */
 export interface Step {
-  /** 页面路径 */
-  url?: string
+  /** 页面 Hash */
+  hash?: string
   /** 元素选择器 */
   element?: string | (() => string)
   /** 当前步骤标题 */

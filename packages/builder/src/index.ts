@@ -22,7 +22,7 @@ convert()
 declara()
 
 if (argv.watch) {
-  const watcher = chokidar.watch('src/*', {
+  const watcher = chokidar.watch(['src/**/*.ts', 'src/**/*.tsx'], {
     ignoreInitial: true,
   })
   watcher.on('all', () => {
