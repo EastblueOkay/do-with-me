@@ -11,5 +11,5 @@ export default async (step: Step, index) => {
   const node = await findNode(element)
   console.log(`第【${index}】步：${title}`, node)
   // 何时执行下一步
-  await nextPending(nextAt, node)
+  // await nextPending(nextAt, node)
 }

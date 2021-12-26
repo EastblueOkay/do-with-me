@@ -1,20 +1,23 @@
-// await observer((resolve) => {
-//   if (到达结束条件) resolve(node)
-// })
+import throttle from './throttle'
 
 export default async <T extends any>(
-  fn: (resolve: (data: T) => void) => void
+  fn: (resolve: (data?: T) => void) => void
 ) => {
-  return await new Promise((resolve) => {
-    const finalResolve = (data: T) => resolve(data)
+  const throttledFn = throttle(fn)
+  return await new Promise<T>((resolve) => {
+    let finalResolve = null
     const observer = new MutationObserver(() => {
-      fn(finalResolve)
+      if (finalResolve) throttledFn(finalResolve)
     })
-    fn(finalResolve)
+    finalResolve = (data: T) => {
+      observer.disconnect()
+      resolve(data)
+    }
+    throttledFn(finalResolve)
     observer.observe(document.body, {
       attributes: true,
       childList: true,
       subtree: true,
     })
-  }).then(() => {})
+  })
 }
