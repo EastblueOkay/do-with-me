@@ -17,7 +17,11 @@ export interface Step {
   /** 类名 */
   className?: string
   /** 进行下一步的时机 */
-  nextAt?: (element: HTMLElement, next: () => void) => boolean | undefined
+  nextAt?: (
+    element: Element,
+    next: () => void,
+    step: Step
+  ) => boolean | (() => void) | undefined
 }
 
 /**

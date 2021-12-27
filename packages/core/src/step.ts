@@ -1,15 +1,12 @@
 import { Step } from '@follow-me/types'
 import findNode from './utils/find-node'
-
-const nextPending = async (nextAt: Step['nextAt'], element: Element) => {
-  return new Promise((resolve) => {})
-}
+import nextPending from './utils/next-pending'
 
 export default async (step: Step, index) => {
-  const { hash, element, title, description, nextAt } = step
+  const { hash, element, title, description } = step
   if (hash) window.location.hash = hash
   const node = await findNode(element)
-  console.log(`第【${index}】步：${title}`, node)
-  // 何时执行下一步
-  // await nextPending(nextAt, node)
+  // node.scrollIntoView()
+  console.log(`第【${index}】步：${title}`, node, description)
+  await nextPending(node, step)
 }
