@@ -1,0 +1,18 @@
+{
+  "name": "@follow-me/render",
+  "version": "0.0.0",
+  "description": "Reproducing operation steps render",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "builder"
+  },
+  "author": "eastblue_lan@126.com",
+  "license": "ISC",
+  "dependencies": {
+    "@follow-me/types": "0.0.0",
+    "@follow-me/builder": "0.0.0",
+    "@popperjs/core": "^2.11.0"
+  }
+}

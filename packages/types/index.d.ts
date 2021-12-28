@@ -41,3 +41,11 @@ export interface Options {
   /** 所有步骤完成回调 */
   onFinished?: () => void
 }
+
+/**
+ * 步骤渲染器
+ */
+export interface Renderer {
+  render(element: Element, step: Step, index: number): void
+  destroy(): void
+}

@@ -1,11 +1,13 @@
-import { Options } from '@follow-me/types'
+import { Options, Renderer } from '@follow-me/types'
 import stepDo from './step'
 export default class Core {
   private options: Options
   private currentIndex: number = -1
+  private renderer: Renderer
 
-  constructor(options: Options) {
+  constructor(options: Options, renderer?: Renderer) {
     this.options = options
+    this.renderer = renderer
   }
 
   finish() {
@@ -14,6 +16,10 @@ export default class Core {
   }
 
   public start() {
+    if (!this.renderer) {
+      console.error(`[follow-me]: missing renderer`)
+      return
+    }
     if (!this.options.steps?.length) return
     this.play(0)
   }
@@ -24,11 +30,15 @@ export default class Core {
       this.finish()
       return
     }
-    await stepDo(step, index)
+    await stepDo(step, index, this.renderer)
     await this.play(index + 1)
   }
 
   public getCurrentIndex(): number {
     return this.currentIndex
+  }
+
+  public setRenderer(renderer: Renderer) {
+    this.renderer = renderer
   }
 }
