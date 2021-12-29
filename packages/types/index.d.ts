@@ -11,7 +11,7 @@ export interface Step {
   /** 当前步骤标题 */
   title?: string
   /** 当前步骤描述 */
-  description?: string
+  description?: any
   /** 自定义样式 */
   style?: CSS.Properties
   /** 类名 */
@@ -22,6 +22,7 @@ export interface Step {
     next: () => void,
     step: Step
   ) => boolean | (() => void) | undefined
+  [key: string]: any
 }
 
 /**
@@ -45,7 +46,9 @@ export interface Options {
 /**
  * 步骤渲染器
  */
-export interface Renderer {
+export interface Render {
   render(element: Element, step: Step, index: number): void
   destroy(): void
 }
+
+export type CSSProperties = CSS.Properties
