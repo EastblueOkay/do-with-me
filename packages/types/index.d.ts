@@ -3,11 +3,11 @@ import * as CSS from 'csstype'
 /**
  * 步骤
  */
-export interface Step {
+interface Step {
   /** 页面 Hash */
   hash?: string
   /** 元素选择器 */
-  element?: string | (() => string)
+  element?: string | (() => Element)
   /** 当前步骤标题 */
   title?: string
   /** 当前步骤描述 */
@@ -16,6 +16,8 @@ export interface Step {
   style?: CSS.Properties
   /** 类名 */
   className?: string
+  /** 滚动元素选择器，默认为 body */
+  container?: string | (() => Element)
   /** 进行下一步的时机 */
   nextAt?: (
     element: Element,

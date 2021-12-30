@@ -1,17 +1,16 @@
+import styles from './styles'
+
 let popup: HTMLDivElement = document.createElement('div')
 let content: HTMLDivElement = document.createElement('div')
 let arrow: HTMLDivElement = document.createElement('div')
 let lastParent: Element = null
 
 popup.appendChild(content)
-popup.style.background = '#fff'
-popup.style.padding = '16px 20px'
-popup.style.boxShadow =
-  '0 1px 1px 0 rgb(66 66 66 / 8%), 0 1px 3px 1px rgb(66 66 66 / 16%)'
-popup.style.borderRadius = '2px'
+popup.className = styles.container
 
 popup.appendChild(arrow)
-arrow.setAttribute('data-popper-arrow', '')
+arrow.className = styles.arrow
+arrow.setAttribute('data-popper-arrow', 'true')
 
 const createPopup = (parent: Element = document.body) => {
   if (parent !== lastParent && lastParent !== null) {
