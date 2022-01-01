@@ -11,8 +11,10 @@
   "author": "eastblue_lan@126.com",
   "license": "ISC",
   "dependencies": {
-    "@follow-me/types": "0.0.0",
     "@follow-me/builder": "0.0.0",
-    "@popperjs/core": "^2.11.0"
+    "@follow-me/types": "0.0.0",
+    "@popperjs/core": "^2.11.0",
+    "jss": "^10.9.0",
+    "jss-preset-default": "^10.9.0"
   }
 }
