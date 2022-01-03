@@ -3,7 +3,7 @@ import * as CSS from 'csstype'
 /**
  * 步骤
  */
-interface Step {
+export interface Step {
   /** 页面 Hash */
   hash?: string
   /** 元素选择器 */

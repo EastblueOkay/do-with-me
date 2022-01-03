@@ -7,17 +7,38 @@ const styles = {
   container: {
     backgroundColor: 'var(--fm-background-color, #fff)',
     padding: '16px 20px',
-    boxShadow:
-      '0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d',
+    boxShadow: '0 3px 30px rgb(33 33 33 / 30%)',
     borderRadius: 'var(--fm-border-radius, 2px)',
+    '&[data-popper-placement^="top"] > $arrow': {
+      bottom: -4,
+    },
+    '&[data-popper-placement^="bottom"] > $arrow': {
+      top: -4,
+    },
+    '&[data-popper-placement^="left"] > $arrow': {
+      right: -4,
+    },
+    '&[data-popper-placement^="right"] > $arrow': {
+      left: -4,
+    },
   },
   arrow: {
     display: 'block',
     width: 10,
     height: 10,
-    overflow: 'hidden',
-    background: '0 0',
+    background: 'inherit',
     pointerEvents: 'none',
+    position: 'absolute',
+    visibility: 'hidden',
+    '&::before': {
+      position: 'absolute',
+      visibility: 'visible',
+      width: 10,
+      height: 10,
+      background: 'inherit',
+      content: "''",
+      transform: 'rotate(45deg)',
+    },
   },
 }
 

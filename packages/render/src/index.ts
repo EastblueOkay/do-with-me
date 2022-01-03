@@ -32,6 +32,14 @@ export default class implements Render {
 
     this.popperInstance = createPopper(el, popup, {
       placement: 'auto',
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 8],
+          },
+        },
+      ],
     })
   }
 
