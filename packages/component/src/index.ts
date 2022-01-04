@@ -1,1 +1,3 @@
-console.log('component')
+import Modal from './modal'
+
+export default Modal
