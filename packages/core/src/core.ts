@@ -1,5 +1,6 @@
 import { Options, Render } from '@follow-me/types'
 import stepDo from './step'
+
 export default class Core {
   private options: Options
   private currentIndex: number = -1
@@ -26,12 +27,15 @@ export default class Core {
   }
 
   public async play(index: number) {
+    const { onEnter, onLeave } = this.options
     const step = this.options.steps?.[index]
     if (!step) {
       this.finish()
       return
     }
+    if (onEnter) onEnter(index, step)
     await stepDo(step, index, this.render)
+    if (onLeave) onLeave(index, step)
     await this.play(index + 1)
   }
 

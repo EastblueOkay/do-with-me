@@ -43,6 +43,10 @@ export interface Options {
   steps?: Step[]
   /** 所有步骤完成回调 */
   onFinished?: () => void
+  /** 步骤进入回调 */
+  onEnter?: (index: number, step: Step) => void
+  /** 步骤完成回调 */
+  onLeave?: (index: number, step: Step) => void
 }
 
 /**
