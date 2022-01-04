@@ -1,5 +1,9 @@
 {
   "name": "follow-me",
+  "scripts": {
+    "build": "npx lerna run build",
+    "build:watch": "npx lerna run build --stream -- --watch"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
