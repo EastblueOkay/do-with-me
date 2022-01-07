@@ -4,10 +4,12 @@ import Modal from './modal'
 import Header from './header'
 import mergeTheme from './utils/theme-merge'
 import { Provider as I18nProvider } from './i18n'
+import List from './list'
 
 const Comp = () => (
   <Modal visible>
     <Header />
+    <List />
   </Modal>
 )
 

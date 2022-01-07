@@ -1,11 +1,9 @@
 import { createUseStyles } from 'react-jss'
 import type { Theme } from '../type'
 
-const gap = 16
-
 export default createUseStyles((theme: Theme) => ({
   header: {
-    padding: '16px 16px 0 16px',
+    padding: `${theme.padding}px ${theme.padding}px 0 ${theme.padding}px`,
     '& h4': {
       color: '#1e2d57',
       padding: 0,
@@ -27,7 +25,7 @@ export default createUseStyles((theme: Theme) => ({
     },
   },
   search: {
-    padding: gap,
+    padding: theme.padding,
     position: 'sticky',
     top: 0,
     '& input': {
@@ -46,7 +44,7 @@ export default createUseStyles((theme: Theme) => ({
   },
   icon: {
     position: 'absolute',
-    right: gap + 6,
+    right: theme.padding + 6,
     top: '50%',
     transform: `translateY(-50%)`,
     color: `#bfbfbf`,

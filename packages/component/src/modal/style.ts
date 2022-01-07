@@ -9,7 +9,7 @@ export default createUseStyles((theme: Theme) => ({
     right: theme.edge,
     top: theme.edge,
     bottom: theme.edge,
-    width: 300,
+    width: theme.width,
     background: '#fafafa',
     borderRadius: theme.borderRadius,
     boxShadow: theme.boxShadow,
@@ -17,6 +17,7 @@ export default createUseStyles((theme: Theme) => ({
     boxSizing: 'border-box',
     overflow: 'auto',
     color: theme.textColor,
+    fontSize: theme.fontSize,
     '& *': {
       boxSizing: 'border-box',
     },
