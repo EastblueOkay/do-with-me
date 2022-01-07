@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import type { Value as I18nValue } from './i18n'
 
 export interface Theme {
   primaryColor?: string
@@ -9,10 +10,11 @@ export interface Theme {
 }
 
 export interface Props {
-  visible: boolean
+  visible?: boolean
   onClose?: () => void
   /** 自定义主题 */
   theme?: Theme
+  locale?: I18nValue
 }
 
 export interface ModalProps extends Pick<Props, 'visible' | 'onClose'> {

@@ -3,11 +3,18 @@ import type { Props } from './type'
 import Modal from './modal'
 import Header from './header'
 import mergeTheme from './utils/theme-merge'
+import { Provider as I18nProvider } from './i18n'
 
-export default ({ theme }: Props) => (
+const Comp = () => (
+  <Modal visible>
+    <Header />
+  </Modal>
+)
+
+export default ({ theme, locale = 'en-US' }: Props) => (
   <ThemeProvider theme={mergeTheme(theme)}>
-    <Modal visible>
-      <Header />
-    </Modal>
+    <I18nProvider value={{ locale }}>
+      <Comp />
+    </I18nProvider>
   </ThemeProvider>
 )
