@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import { useRef } from 'react'
-import type { ModalProps } from './modal'
+import type { ModalProps } from '../type'
 import Modal from './modal'
 
 const createRoot = (() => {

@@ -1,8 +1,7 @@
 import { createUseStyles } from 'react-jss'
+import type { Theme } from '../type'
 
-const borderColor = '#dbdbdb'
-const primaryColor = `#5fcdff`
-export default createUseStyles({
+export default createUseStyles((theme: Theme) => ({
   header: {
     padding: 16,
     '& h4': {
@@ -21,26 +20,26 @@ export default createUseStyles({
         right: 0,
         bottom: 0,
         height: 1,
-        background: borderColor,
+        background: theme.borderColor,
       },
     },
   },
   search: {
     margin: '12px 0',
     background: '#fff',
-    borderRadius: 10,
+    borderRadius: theme.borderRadius,
     '& input': {
       height: 34,
-      borderRadius: 10,
+      borderRadius: theme.borderRadius,
       lineHeight: `34px`,
       padding: '0 8px',
       background: 'transparent',
       outline: 'none',
       width: '100%',
-      border: `1px solid ${borderColor}`,
+      border: `1px solid ${theme.borderColor}`,
       '&:active, &:focus': {
-        borderColor: primaryColor,
+        borderColor: theme.primaryColor,
       },
     },
   },
-})
+}))

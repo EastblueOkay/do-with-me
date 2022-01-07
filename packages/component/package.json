@@ -11,13 +11,15 @@
   "author": "eastblue_lan@126.com",
   "license": "ISC",
   "devDependencies": {
-    "@follow-me/builder": "0.0.0"
+    "@follow-me/builder": "0.0.0",
+    "@types/react-dom": "^17.0.11"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "@types/react-dom": "^17.0.11",
     "clsx": "^1.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-jss": "^10.9.0"
   }
 }

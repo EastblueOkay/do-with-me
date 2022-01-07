@@ -1,23 +1,26 @@
 import { createUseStyles } from 'react-jss'
+import type { Theme } from '../type'
 
-const edgeDistance = 20
-
-export default createUseStyles({
+export default createUseStyles((theme: Theme) => ({
   modal: {
     display: 'none',
     position: 'fixed',
     opacity: 0,
-    right: edgeDistance,
-    top: edgeDistance,
-    bottom: edgeDistance,
+    right: theme.edge,
+    top: theme.edge,
+    bottom: theme.edge,
     width: 300,
     background: '#fafafa',
-    borderRadius: 10,
-    boxShadow: '0 0 20px rgba(0,0,0,.2)',
+    borderRadius: theme.borderRadius,
+    boxShadow: theme.boxShadow,
     zIndex: 1080,
+    boxSizing: 'border-box',
+    '& *': {
+      boxSizing: 'border-box',
+    },
   },
   visible: {
     opacity: 1,
     display: 'flow-root',
   },
-})
+}))

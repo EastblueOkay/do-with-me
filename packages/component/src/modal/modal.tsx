@@ -1,12 +1,6 @@
 import classname from 'clsx'
-import type { ReactNode } from 'react'
+import type { ModalProps } from '../type'
 import useStyles from './style'
-
-export interface ModalProps {
-  visible: boolean
-  onClose?: () => void
-  children: ReactNode
-}
 
 export default (props: ModalProps) => {
   const { visible, children } = props
