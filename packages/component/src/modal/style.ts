@@ -15,6 +15,8 @@ export default createUseStyles((theme: Theme) => ({
     boxShadow: theme.boxShadow,
     zIndex: 1080,
     boxSizing: 'border-box',
+    overflow: 'auto',
+    color: theme.textColor,
     '& *': {
       boxSizing: 'border-box',
     },

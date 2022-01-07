@@ -7,6 +7,7 @@ export interface Theme {
   borderRadius?: string | number
   borderColor?: string
   edge?: string | number
+  textColor?: string
 }
 
 export interface Props {

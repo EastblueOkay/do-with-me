@@ -6,6 +6,7 @@ const defaultTheme: Theme = {
   primaryColor: `#4fec69`,
   borderColor: `#dbdbdb`,
   edge: 20,
+  textColor: '#333E59',
 }
 
 export default (theme: Theme) => Object.assign({}, defaultTheme, theme)

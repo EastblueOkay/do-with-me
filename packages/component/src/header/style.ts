@@ -1,9 +1,11 @@
 import { createUseStyles } from 'react-jss'
 import type { Theme } from '../type'
 
+const gap = 16
+
 export default createUseStyles((theme: Theme) => ({
   header: {
-    padding: 16,
+    padding: '16px 16px 0 16px',
     '& h4': {
       color: '#1e2d57',
       padding: 0,
@@ -25,14 +27,14 @@ export default createUseStyles((theme: Theme) => ({
     },
   },
   search: {
-    margin: '12px 0',
-    background: '#fff',
-    borderRadius: theme.borderRadius,
+    padding: gap,
+    position: 'sticky',
+    top: 0,
     '& input': {
       height: 34,
       borderRadius: theme.borderRadius,
       lineHeight: `34px`,
-      padding: '0 8px',
+      padding: '0 24px 0 8px',
       background: 'transparent',
       outline: 'none',
       width: '100%',
@@ -41,5 +43,12 @@ export default createUseStyles((theme: Theme) => ({
         borderColor: theme.primaryColor,
       },
     },
+  },
+  icon: {
+    position: 'absolute',
+    right: gap + 6,
+    top: '50%',
+    transform: `translateY(-50%)`,
+    color: `#bfbfbf`,
   },
 }))
