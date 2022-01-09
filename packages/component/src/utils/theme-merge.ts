@@ -13,6 +13,7 @@ const defaultTheme: Theme = {
   itemBackground: `#fff`,
   transitionDuration: 0.2,
   transitionTimingFunction: `cubic-bezier(0.78, 0.14, 0.15, 0.86)`,
+  background: '#fafafa',
 }
 
-export default (theme: Theme) => Object.assign({}, defaultTheme, theme)
+export default (theme: Theme) => ({ ...defaultTheme, ...theme })

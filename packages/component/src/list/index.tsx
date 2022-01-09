@@ -7,6 +7,12 @@ export default () => {
     <div className={classes.list}>
       <Item />
       <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
     </div>
   )
 }

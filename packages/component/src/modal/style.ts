@@ -10,7 +10,7 @@ export default createUseStyles((theme: Theme) => ({
     top: theme.edge,
     bottom: theme.edge,
     width: theme.width,
-    background: '#fafafa',
+    background: theme.background,
     borderRadius: theme.borderRadius,
     boxShadow: theme.boxShadow,
     zIndex: 1080,

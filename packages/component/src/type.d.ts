@@ -14,6 +14,7 @@ export interface Theme {
   itemBackground?: string
   transitionDuration?: number
   transitionTimingFunction?: string
+  background?: string
 }
 
 export interface Props {
