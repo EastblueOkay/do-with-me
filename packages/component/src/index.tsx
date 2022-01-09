@@ -1,15 +1,13 @@
 import { ThemeProvider } from 'react-jss'
 import type { Props } from './type'
-import Modal from './modal'
-import Header from './header'
+import Modal from './comp/modal'
 import mergeTheme from './utils/theme-merge'
-import { Provider as I18nProvider } from './i18n'
-import List from './list'
+import { Provider as I18nProvider } from './utils/i18n'
+import Menu from './menu'
 
 const Comp = () => (
   <Modal visible>
-    <Header />
-    <List />
+    <Menu />
   </Modal>
 )
 

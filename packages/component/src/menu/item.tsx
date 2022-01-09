@@ -1,5 +1,5 @@
 import useStyles from './style'
-import Icon from '../icons'
+import Icon from '../comp/icons'
 
 export default () => {
   const classes = useStyles()

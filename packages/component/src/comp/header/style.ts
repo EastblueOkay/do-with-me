@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import type { Theme } from '../type'
+import type { Theme } from '../../type'
 
 export default createUseStyles((theme: Theme) => ({
   header: {
