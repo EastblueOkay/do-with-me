@@ -4,10 +4,12 @@ import Modal from './comp/modal'
 import mergeTheme from './utils/theme-merge'
 import { Provider as I18nProvider } from './utils/i18n'
 import Menu from './menu'
+import Steps from './steps'
 
 const Comp = () => (
   <Modal visible>
-    <Menu />
+    {/* <Menu /> */}
+    <Steps />
   </Modal>
 )
 
