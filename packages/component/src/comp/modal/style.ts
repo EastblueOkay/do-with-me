@@ -18,6 +18,7 @@ export default createUseStyles((theme: Theme) => ({
     overflow: 'auto',
     color: theme.textColor,
     fontSize: theme.fontSize,
+    minHeight: 300,
     '& *': {
       boxSizing: 'border-box',
     },

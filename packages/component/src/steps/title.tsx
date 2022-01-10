@@ -6,7 +6,7 @@ export default () => {
   return (
     <h4 className={classes.title}>
       <Icon name="back" />
-      <span>Title TitleTitleTitleTitleTitleTitleTitleTitle</span>
+      <span>Title</span>
     </h4>
   )
 }

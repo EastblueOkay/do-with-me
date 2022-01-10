@@ -1,8 +1,12 @@
-import Item from './item'
+import Item from '../comp/item'
 import useStyles from './style'
 import Header from '../comp/header'
 
-export default () => {
+interface Props {
+  onChange: (value: any) => void
+}
+
+export default ({ onChange }: Props) => {
   const classes = useStyles()
   return (
     <div>
