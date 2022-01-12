@@ -6,7 +6,10 @@ export default (props: ModalProps) => {
   const { visible, children } = props
   const classes = useStyles()
   return (
-    <div className={classname(classes.modal, visible && classes.visible)}>
+    <div
+      data-fm
+      className={classname(classes.modal, visible && classes.visible)}
+    >
       {children}
     </div>
   )

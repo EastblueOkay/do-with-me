@@ -28,6 +28,7 @@ export default createUseStyles((theme: Theme) => ({
     whiteSpace: `nowrap`,
     width: `100%`,
     zIndex: 10,
+    transition: `all ${theme.transitionDuration}s ${theme.transitionTimingFunction}`,
     '& span': {
       marginLeft: 12,
       verticalAlign: 'middle',
@@ -36,7 +37,11 @@ export default createUseStyles((theme: Theme) => ({
       cursor: 'pointer',
     },
   },
+  sticky: {
+    boxShadow: theme.boxShadow,
+  },
   list: {
     padding: `0 ${theme.padding}px`,
+    overflow: 'hidden',
   },
 }))

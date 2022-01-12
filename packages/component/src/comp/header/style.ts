@@ -25,6 +25,7 @@ export default createUseStyles((theme: Theme) => ({
     },
   },
   search: {
+    transition: `all ${theme.transitionDuration}s ${theme.transitionTimingFunction}`,
     padding: theme.padding,
     position: 'sticky',
     top: 0,
@@ -43,6 +44,9 @@ export default createUseStyles((theme: Theme) => ({
         borderColor: theme.primaryColor,
       },
     },
+  },
+  sticky: {
+    boxShadow: theme.boxShadow,
   },
   icon: {
     position: 'absolute',
