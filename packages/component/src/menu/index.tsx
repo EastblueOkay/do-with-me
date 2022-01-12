@@ -12,14 +12,14 @@ export default ({ onChange }: Props) => {
     <div>
       <Header />
       <div className={classes.list}>
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
+        <Item showRight />
       </div>
     </div>
   )

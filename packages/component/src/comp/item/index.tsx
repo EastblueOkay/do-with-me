@@ -6,10 +6,11 @@ interface Props {
   count?: number
   active?: boolean
   index?: number
+  showRight?: boolean
 }
 
 export default (props: Props) => {
-  const { count, active, index } = props
+  const { count, active, index, showRight } = props
   const classes = useStyles()
   return (
     <div className={classname(classes.item, active && classes.active)}>
@@ -32,6 +33,11 @@ export default (props: Props) => {
         <span className={classes.check}>
           <Icon name="check" />
         </span>
+      )}
+      {showRight && (
+        <div className={classes.right}>
+          <Icon name="right" />
+        </div>
       )}
     </div>
   )

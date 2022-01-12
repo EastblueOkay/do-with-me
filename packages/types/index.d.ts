@@ -1,5 +1,11 @@
 import * as CSS from 'csstype'
 
+export interface Manual {
+  title: string
+  description?: string
+  steps: Step[]
+}
+
 /**
  * 步骤
  */

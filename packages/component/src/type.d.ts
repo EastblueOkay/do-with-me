@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Manual } from '@follow-me/types'
 import type { Value as I18nValue } from './utils/i18n'
 
 export interface Theme {
@@ -20,6 +21,7 @@ export interface Theme {
 export interface Props {
   visible?: boolean
   onClose?: () => void
+  data: Manual[]
   /** 自定义主题 */
   theme?: Theme
   locale?: I18nValue

@@ -91,4 +91,11 @@ export default createUseStyles((theme: Theme) => ({
     minWidth: 44,
     textAlign: 'center',
   },
+
+  right: {
+    display: `flex`,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 6,
+  },
 }))
