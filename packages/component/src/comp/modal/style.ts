@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import type { Theme } from '../type'
+import type { Theme } from '../../type'
 
 export default createUseStyles((theme: Theme) => ({
   modal: {
@@ -10,7 +10,7 @@ export default createUseStyles((theme: Theme) => ({
     top: theme.edge,
     bottom: theme.edge,
     width: theme.width,
-    background: '#fafafa',
+    background: theme.background,
     borderRadius: theme.borderRadius,
     boxShadow: theme.boxShadow,
     zIndex: 1080,
@@ -18,6 +18,7 @@ export default createUseStyles((theme: Theme) => ({
     overflow: 'auto',
     color: theme.textColor,
     fontSize: theme.fontSize,
+    minHeight: 300,
     '& *': {
       boxSizing: 'border-box',
     },

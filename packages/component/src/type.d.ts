@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { Value as I18nValue } from './i18n'
+import type { Value as I18nValue } from './utils/i18n'
 
 export interface Theme {
   primaryColor?: string
@@ -14,6 +14,7 @@ export interface Theme {
   itemBackground?: string
   transitionDuration?: number
   transitionTimingFunction?: string
+  background?: string
 }
 
 export interface Props {

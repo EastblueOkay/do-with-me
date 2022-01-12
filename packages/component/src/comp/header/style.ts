@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import type { Theme } from '../type'
+import type { Theme } from '../../type'
 
 export default createUseStyles((theme: Theme) => ({
   header: {
@@ -28,6 +28,8 @@ export default createUseStyles((theme: Theme) => ({
     padding: theme.padding,
     position: 'sticky',
     top: 0,
+    background: theme.background,
+    zIndex: 10,
     '& input': {
       height: 34,
       borderRadius: theme.borderRadius,

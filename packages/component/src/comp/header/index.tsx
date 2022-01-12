@@ -1,5 +1,5 @@
 import useStyles from './style'
-import useI18n from '../i18n'
+import useI18n from '../../utils/i18n'
 import Icon from '../icons'
 
 export default () => {

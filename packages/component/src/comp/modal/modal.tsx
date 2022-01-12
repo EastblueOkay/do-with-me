@@ -1,5 +1,5 @@
 import classname from 'clsx'
-import type { ModalProps } from '../type'
+import type { ModalProps } from '../../type'
 import useStyles from './style'
 
 export default (props: ModalProps) => {
