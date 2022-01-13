@@ -4,7 +4,12 @@ import useStyles from './style'
 import Icon from '../comp/icons'
 import useSticky from '../utils/use-sticky'
 
-export default () => {
+interface Props {
+  title: string
+  onBack?: () => void
+}
+
+export default ({ title, onBack }: Props) => {
   const classes = useStyles()
   const ref = useRef<HTMLDivElement>()
   const sticky = useSticky(ref)
@@ -13,8 +18,8 @@ export default () => {
       ref={ref}
       className={classname(classes.title, sticky && classes.sticky)}
     >
-      <Icon name="back" />
-      <span>Title</span>
+      <Icon name="back" onClick={onBack} />
+      <span>{title}</span>
     </h4>
   )
 }

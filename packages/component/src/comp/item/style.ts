@@ -38,6 +38,7 @@ export default createUseStyles((theme: Theme) => ({
     width: 32,
     height: 32,
     display: 'flex',
+    position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '50%',
@@ -97,5 +98,29 @@ export default createUseStyles((theme: Theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     paddingLeft: 6,
+  },
+  '@keyframes scaless': {
+    '0%': {
+      transform: `scale(1)`,
+    },
+    '50%,75%': {
+      transform: `scale(1.8)`,
+    },
+    '78%,100%': {
+      opacity: 0,
+    },
+  },
+  shine: {
+    '&::after': {
+      position: 'absolute',
+      content: '""',
+      display: 'block',
+      width: 32,
+      height: 32,
+      borderRadius: '50%',
+      opacity: 0.7,
+      backgroundColor: theme.primaryColor,
+      animation: `$scaless 1.2s infinite cubic-bezier(0, 0, .49, 1.02)`,
+    },
   },
 }))

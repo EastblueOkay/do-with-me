@@ -18,7 +18,7 @@ export default (ref: MutableRefObject<HTMLDivElement | null>) => {
     if (!el) return null
     const scrollEl = getParent(el, '[data-fm]')
     scrollEl.addEventListener('scroll', scrolling)
-    return () => el.removeEventListener('scroll', scrolling)
+    return () => scrollEl.removeEventListener('scroll', scrolling)
   }, [ref, scrolling])
 
   return sticky
